@@ -15,7 +15,7 @@ after_success:
   - docker build -t danedabomb/multi-nginx ./nginx
   - docker build -t danedabomb/multi-server ./server
   - docker build -t danedabomb/multi-worker ./worker
-  # Log in to the docker CLI
+  # Log in to the docker CLI (password and id hidden in Travis CLI)
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push danedabomb/multi-client
