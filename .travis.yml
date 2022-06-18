@@ -23,6 +23,7 @@ after_success:
   - docker push danedabomb/multi-server
   - docker push danedabomb/multi-worker
 
+  # Deploy to AWS Elastic Beanstalk service with AWS ECS underneath
   deploy:
     provider: elasticbeanstalk
     region: 'us-east-1'
